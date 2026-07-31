@@ -91,11 +91,13 @@ export const projects: Project[] = [
 			},
 			{
 				label: "統計儀表板",
-				detail: "透過 Recharts 圖表呈現個人觀演趨勢，包含月度場次、標籤分佈、年度比較、消費統計等多維度回顧",
+				detail:
+					"透過 Recharts 圖表呈現個人觀演趨勢，包含月度場次、標籤分佈、年度比較、消費統計等多維度回顧",
 			},
 			{
 				label: "後台管理系統",
-				detail: "管理員可維護演唱會範本資料、管理使用者權限與停權，並具備登入失敗鎖定機制防止暴力破解",
+				detail:
+					"管理員可維護演唱會範本資料、管理使用者權限與停權，並具備登入失敗鎖定機制防止暴力破解",
 			},
 		],
 		stack: [
@@ -205,7 +207,7 @@ export const projects: Project[] = [
 			},
 		],
 		stack: ["Next.js", "Payload CMS", "PostgreSQL", "Docker"],
-		unavailableNote: "客戶尚未正式對外發布，可於面談時提供畫面說明",
+		unavailableNote: "客戶尚未正式對外發布",
 	},
 ];
 
