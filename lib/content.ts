@@ -27,7 +27,7 @@ export const profile = {
 		"的介面。",
 	],
 	heroSub:
-		"具備約三年前端開發經驗，專注 React、Next.js、TypeScript，並具備 Node.js、Firebase 等後端基礎實務能力。曾參與政府與學術研究平台開發，擅長將大量資料與地圖圖徵轉化為流暢的操作體驗。",
+		"具備約三年前端開發經驗，專注 React、Next.js、TypeScript，並具備 Node.js、Firebase 等後端基礎實務能力，擅長將大量資料與地圖圖徵轉化為流暢的操作體驗。",
 	email: "saw634703@gmail.com",
 	phone: "0920-348-078",
 	github: "https://github.com/yee882408",
@@ -35,8 +35,7 @@ export const profile = {
 
 export const stats = [
 	{ value: "3年", label: "前端工作經歷" },
-	{ value: "10s → 1s", label: "SPARQL 查詢優化" },
-	{ value: "5+", label: "上線平台專案" },
+	{ value: "80%", label: "SPARQL 查詢優化" },
 	{ value: "805", label: "TOEIC" },
 ] as const;
 
@@ -54,9 +53,9 @@ export const experience = {
 	period: "2023.07 – 2026.07",
 	duration: "3年",
 	highlights: [
-		"負責政府及學術研究平台前端開發，主要使用 React、Next.js、TypeScript，並依專案需求完成對應的 API 與資料串接，確保前端功能可獨立交付。",
+		"使用 React、Next.js、TypeScript，並依專案需求完成對應的 API 與資料串接，確保前端功能可獨立交付。",
 		"使用 Leaflet 建置地圖功能，含 Marker、Cluster、Overlay、多時期 Tile Layer 切換；面對千筆級圖徵，依可視範圍動態篩選並限制顯示密度、搭配 Cluster 合併鄰近點位，縮放地圖時才逐步顯示更多細節，解決大量圖徵同時顯示的效能瓶頸。",
-		"撰寫 SPARQL Query 串接 Fuseki，重新設計查詢結構並調整索引使用方式，將搜尋功能等待時間從約 10 秒縮短至 1 秒內；並開發 Node.js API 串接 Firestore。",
+		"撰寫 SPARQL Query 串接 Fuseki，重新設計查詢結構並調整索引使用方式，將搜尋功能等待時間縮短約 80%；並開發 Node.js API 串接 Firestore。",
 		"參與開發並維護 5+ 個平台的前台功能與對應後台管理系統，包含資料 CRUD、權限管理、Authentication。",
 		"參與需求討論，與 PM、設計師及客戶確認功能可行性與工時評估，並提出技術與體驗優化方案。",
 		"撰寫 Playwright E2E 測試，涵蓋約 10-20 個核心操作流程，協助降低回歸測試成本；並推動網站無障礙化改善，通過政府無障礙檢測工具驗證。",
@@ -136,35 +135,25 @@ export const projects: Project[] = [
 		url: "https://land.daoyidh.com/",
 	},
 	{
-		id: "tlsg",
-		name: "文學好臺誌",
+		id: "tltc",
+		name: "台灣文學外譯房",
 		period: "2023.07 — 2026.07",
 		description:
-			"文學好臺誌是臺灣文學資料檢索與展示平台，負責平台上線後的前後台持續維護，聚焦既有功能改善、後台編輯功能與查詢效能優化。",
+			"台灣文學外譯房是台灣文學外譯作品的資料檢索與展示平台，負責平台上線後的前後台持續維護，聚焦既有功能改善、後台編輯功能與查詢效能優化。",
 		features: [
 			{
 				label: "SPARQL 查詢優化",
-				detail: "重新設計查詢結構並調整索引使用方式，將搜尋等待時間從約 10 秒縮短至 1 秒內",
+				detail: "重新設計查詢結構並調整索引使用方式，將搜尋等待時間優化約 80%",
 			},
 			{ label: "後台效能優化", detail: "改善後台搜尋結果載入時間" },
 			{
 				label: "技術支援與維護",
 				detail: "處理上線後 Bug 修復與客戶反映問題排查，並依資料來源異動調整 SPARQL 查詢邏輯",
 			},
-			{ label: "後台編輯功能維護", detail: "依需求開發新頁面與功能模組，優化既有功能操作體驗" },
-		],
-		stack: ["React", "SPARQL", "Node.js", "Firebase"],
-		url: "https://tlsg.nmtl.gov.tw/zh-tw/main/home",
-	},
-	{
-		id: "tltc",
-		name: "台灣文學外譯房",
-		period: "2023.07 — 2026.07",
-		description:
-			"台灣文學外譯房是臺灣文學外譯作品的展示與檢索平台，負責平台上線後的前後台持續維護，聚焦多語言資料查詢穩定性與後台編輯功能。",
-		features: [
-			{ label: "後台編輯功能", detail: "開發拖曳（drag）互動，供管理員調整內容顯示順序與排版" },
-			{ label: "技術支援與維護", detail: "處理上線後 Bug 修復與客戶反映問題排查" },
+			{
+				label: "後台編輯功能維護",
+				detail: "依需求開發新頁面與功能模組，優化既有功能操作體驗",
+			},
 		],
 		stack: ["React", "SPARQL", "Node.js", "Firebase"],
 		url: "https://tltc.nmtl.gov.tw/zh-tw/home",

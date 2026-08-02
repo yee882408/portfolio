@@ -30,7 +30,7 @@ export default function Hero() {
 							<span key={i} className="text-geo">
 								{part.text}
 							</span>
-						),
+						)
 					)}
 				</h1>
 
@@ -38,7 +38,7 @@ export default function Hero() {
 					{profile.heroSub}
 				</p>
 
-				<div className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-[10px] border border-line bg-line sm:grid-cols-4">
+				<div className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-[10px] border border-line bg-line sm:grid-cols-3">
 					{stats.map((stat) => (
 						<div key={stat.label} className="bg-panel px-5 py-5">
 							<b className="block font-display text-tight-2xl text-geo">{stat.value}</b>
