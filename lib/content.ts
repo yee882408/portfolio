@@ -56,11 +56,27 @@ export const experience = {
 		"使用 React、Next.js、TypeScript，並依專案需求完成對應的 API 與資料串接，確保前端功能可獨立交付。",
 		"使用 Leaflet 建置地圖功能，含 Marker、Cluster、Overlay、多時期 Tile Layer 切換；面對千筆級圖徵，依可視範圍動態篩選並限制顯示密度、搭配 Cluster 合併鄰近點位，縮放地圖時才逐步顯示更多細節，解決大量圖徵同時顯示的效能瓶頸。",
 		"撰寫 SPARQL Query 串接 Fuseki，重新設計查詢結構並調整索引使用方式，將搜尋功能等待時間縮短約 80%；並開發 Node.js API 串接 Firestore。",
-		"參與開發並維護 5+ 個平台的前台功能與對應後台管理系統，包含資料 CRUD、權限管理、Authentication。",
-		"參與需求討論，與 PM、設計師及客戶確認功能可行性與工時評估，並提出技術與體驗優化方案。",
-		"撰寫 Playwright E2E 測試，涵蓋約 10-20 個核心操作流程，協助降低回歸測試成本；並推動網站無障礙化改善，通過政府無障礙檢測工具驗證。",
+		"規劃並實作角色權限系統（RBAC），自後端角色定義至前端權限判斷邏輯皆獨立設計，涵蓋管理員、組織管理員、一般使用者等多層級角色；此架構於 2 個平台間複用，並依不同技術棧（Firebase／Payload CMS + PostgreSQL）調整實作。",
+		"後台資料表原本一次性請求全部資料，資料量達萬筆時導致 API 無回應、頁面空白；改為分頁批次查詢並導入 react-window 虛擬化渲染，同時重新設計 SPARQL Query 結構、調整索引使用方式，將頁面載入時間縮短至 2 秒內。",
+		"主動導入 React Query 統一處理資料快取與非同步狀態，並以 Zustand 取代原本零散的 Context/Props Drilling，協助 3 人團隊統一狀態管理規範，新功能開發速度明顯提升。",
+		"參與開發並維護 5+ 個平台的前台功能與對應後台管理系統，包含資料 CRUD、權限管理、Authentication；主動發現地圖時間軸置於地圖上影響操作視野，重新設計為獨立浮動 widget，獲得客戶與 PM 正面回饋。",
+		"主動推動網站無障礙化改善，規劃鍵盤導覽動線、語意標籤、對比度等項目，搭配 WAVE、NVDA 等工具進行實際測試並通過 Freego 無障礙檢測驗證，同時教學其他工程師無障礙設計切入角度，推廣團隊開發意識。",
+		"主導 Playwright E2E 測試框架導入，採用 Page Object Model 架構，將登入等具前置需求的固定操作流程封裝為可複用方法，涵蓋約 10-20 個核心操作流程，協助降低回歸測試成本。",
+		"將專案圖片資源改以 Docker Volume 管理，避免容器重建時上傳資源遭清空，確保部署流程穩定性與資料持久性；另具備 Nginx、PM2 基礎部署經驗。",
+		"設計三階段 Claude Code Skills 流程（Figma → Prompt → 開發自檢），將設計稿轉譯為可執行開發需求並自動對照驗收標準自檢，提升開發前置溝通效率。",
 	],
-	tags: ["React", "Next.js", "TypeScript", "Leaflet", "SPARQL", "Node.js", "Firebase"],
+	tags: [
+		"React",
+		"Next.js",
+		"TypeScript",
+		"Leaflet",
+		"SPARQL",
+		"Node.js",
+		"Firebase",
+		"React Query",
+		"Zustand",
+		"Docker",
+	],
 } as const;
 
 export const projects: Project[] = [
@@ -69,7 +85,7 @@ export const projects: Project[] = [
 		name: "Moment Log",
 		period: "2026.07 — 進行中",
 		description:
-			"Moment Log 是一款演唱會回憶記錄平台，使用者可以記錄每一場演唱會的心得、票根資訊與評分，瀏覽其他使用者公開分享的觀演心得，並透過互動功能與其他樂迷交流。專案獨立完成前後端開發，涵蓋資料庫設計、身分驗證、社群互動功能與後台管理系統。",
+			"Moment Log 是一個演唱會回憶記錄平台，使用者可以記錄每一場演唱會的心得、票根資訊與評分，瀏覽其他使用者公開分享的觀演心得，並透過互動功能與其他樂迷交流。專案獨立完成前後端開發，涵蓋資料庫設計、身分驗證、社群互動功能與後台管理系統。",
 		features: [
 			{
 				label: "演唱會紀錄管理",
@@ -115,6 +131,23 @@ export const projects: Project[] = [
 		githubUrl: "https://github.com/yee882408/moment-log",
 	},
 	{
+		id: "portfolio",
+		name: "個人履歷作品集",
+		period: "2026.07 — 進行中",
+		description:
+			"以 Next.js 建構並採用 ISR（Incremental Static Regeneration）渲染策略的個人作品集網站，將履歷內容重新設計為互動式網站，展示前端開發能力與內容架構規劃。",
+		features: [
+			{ label: "履歷內容呈現", detail: "以區塊化設計呈現工作經歷、專案成就、技能與自我介紹" },
+			{ label: "響應式排版", detail: "支援桌機、平板、手機等不同裝置的瀏覽體驗" },
+			{
+				label: "ISR 渲染",
+				detail: "採用 Next.js Incremental Static Regeneration，兼顧 SEO 與頁面載入效能",
+			},
+		],
+		stack: ["Next.js", "TypeScript", "Tailwind CSS 4"],
+		githubUrl: "https://github.com/yee882408/portfolio",
+	},
+	{
 		id: "land-ledger",
 		name: "土地台帳",
 		period: "2023.07 — 2026.07",
@@ -129,9 +162,17 @@ export const projects: Project[] = [
 				detail:
 					"面對千筆級圖徵，依可視範圍動態篩選並限制顯示密度、搭配 Cluster 合併鄰近點位，縮放地圖時才逐步顯示更多細節",
 			},
-			{ label: "會員登入／註冊", detail: "支援不同權限層級的使用者系統" },
+			{
+				label: "會員系統（RBAC）",
+				detail: "實作角色權限系統，支援管理員、一般使用者等多層級角色存取控制",
+			},
+			{
+				label: "前端架構優化",
+				detail:
+					"導入 React Query 統一處理資料快取與非同步狀態，並以 Zustand 取代原本零散的狀態管理，提升團隊開發效率",
+			},
 		],
-		stack: ["Next.js", "Leaflet", "SPARQL", "Firebase"],
+		stack: ["Next.js", "Leaflet", "SPARQL", "Firebase", "React Query", "Zustand"],
 		url: "https://land.daoyidh.com/",
 	},
 	{
@@ -154,8 +195,17 @@ export const projects: Project[] = [
 				label: "後台編輯功能維護",
 				detail: "依需求開發新頁面與功能模組，優化既有功能操作體驗",
 			},
+			{
+				label: "Playwright E2E 測試架構",
+				detail:
+					"導入 Page Object Model 架構，將固定操作流程封裝為可複用方法，涵蓋約 10-20 個核心操作流程",
+			},
+			{
+				label: "無障礙化改善",
+				detail: "規劃鍵盤導覽動線、語意標籤、對比度等項目，通過 Freego 無障礙檢測工具驗證",
+			},
 		],
-		stack: ["React", "SPARQL", "Node.js", "Firebase"],
+		stack: ["React", "SPARQL", "Node.js", "Firebase", "Playwright"],
 		url: "https://tltc.nmtl.gov.tw/zh-tw/home",
 	},
 	{
@@ -210,6 +260,7 @@ export const skills = [
 			"Zod",
 			"Leaflet",
 			"Tailwind CSS / MUI / Shadcn-ui",
+			"Rechart.js",
 		],
 	},
 	{
@@ -227,6 +278,6 @@ export const skills = [
 	},
 	{
 		title: "其他",
-		items: ["SEO", "Google Analytics", "GCP Cloud Scheduler", "Claude Code"],
+		items: ["Vite", "SEO", "Google Analytics", "GCP Cloud Scheduler", "Claude Code"],
 	},
 ] as const;

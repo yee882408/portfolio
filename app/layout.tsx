@@ -23,7 +23,7 @@ const robotoMono = Roboto_Mono({
 export const metadata: Metadata = {
   title: "林楷宜 — Frontend Engineer",
   description:
-    "前端工程師，專注 React、Next.js、TypeScript。具備 Leaflet 地圖開發、SPARQL 資料串接與 Node.js 後端實務經驗，曾參與政府與學術研究平台開發。",
+    "前端工程師，專注 React、Next.js、TypeScript。具備 Leaflet 地圖開發、SPARQL 資料串接與 Node.js 後端實務經驗，並具備 RBAC 權限系統設計、AI 輔助開發流程建置等跨層級系統思維，曾參與政府與學術研究平台開發。",
 };
 
 export default function RootLayout({
