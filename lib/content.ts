@@ -35,7 +35,7 @@ export const profile = {
 
 export const stats = [
 	{ value: "3年", label: "前端工作經歷" },
-	{ value: "80%", label: "SPARQL 查詢優化" },
+	{ value: "7000+", label: "地圖圖徵效能優化" },
 	{ value: "805", label: "TOEIC" },
 ] as const;
 
@@ -55,7 +55,7 @@ export const experience = {
 	highlights: [
 		"使用 React、Next.js、TypeScript，並依專案需求完成對應的 API 與資料串接，確保前端功能可獨立交付。",
 		"使用 Leaflet 建置地圖功能，含 Marker、Cluster、Overlay、多時期 Tile Layer 切換；面對千筆級圖徵，依可視範圍動態篩選並限制顯示密度、搭配 Cluster 合併鄰近點位，縮放地圖時才逐步顯示更多細節，解決大量圖徵同時顯示的效能瓶頸。",
-		"撰寫 SPARQL Query 串接 Fuseki，重新設計查詢結構並調整索引使用方式，將搜尋功能等待時間縮短約 80%；並開發 Node.js API 串接 Firestore。",
+		"撰寫 SPARQL Query 串接 Fuseki，重新設計查詢結構並調整索引使用方式，有效縮短搜尋功能等待時間；並開發 Node.js API 串接 Firestore。",
 		"規劃並實作角色權限系統（RBAC），自後端角色定義至前端權限判斷邏輯皆獨立設計，涵蓋管理員、組織管理員、一般使用者等多層級角色；此架構於 2 個平台間複用，並依不同技術棧（Firebase／Payload CMS + PostgreSQL）調整實作。",
 		"後台資料表原本一次性請求全部資料，資料量達萬筆時導致 API 無回應、頁面空白；改為分頁批次查詢並導入 react-window 虛擬化渲染，同時重新設計 SPARQL Query 結構、調整索引使用方式，將頁面載入時間縮短至 2 秒內。",
 		"主動導入 React Query 統一處理資料快取與非同步狀態，並以 Zustand 取代原本零散的 Context/Props Drilling，協助 3 人團隊統一狀態管理規範，新功能開發速度明顯提升。",
@@ -184,7 +184,7 @@ export const projects: Project[] = [
 		features: [
 			{
 				label: "SPARQL 查詢優化",
-				detail: "重新設計查詢結構並調整索引使用方式，將搜尋等待時間優化約 80%",
+				detail: "重新設計查詢結構並調整索引使用方式，有效優化搜尋等待時間",
 			},
 			{ label: "後台效能優化", detail: "改善後台搜尋結果載入時間" },
 			{
